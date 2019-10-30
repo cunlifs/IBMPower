@@ -14,22 +14,27 @@
 ################################################################
 variable "openstack_image_id" {
   description = "The ID of the image to be used for deploy operations."
+  default = "b3ae886a-928e-4584-ad8a-b23b52fa687e"
 }
 
 variable "openstack_flavor_id" {
   description = "The ID of the flavor to be used for deploy operations."
+  default = "ca56c117-c43d-43c6-adc3-f7eab4b93c2e"
 }
 
 variable "openstack_network_name" {
   description = "The name of the network to be used for deploy operations."
+  default = "VLAN 156"
 }
 
 variable "image_id_username" {
   description = "The username to SSH into image ID"
+  default = "root"
 }
 
 variable "image_id_password" {
   description = "The password of the username to SSH into image ID"
+  default = "t3stc3ll"
 }
 
 provider "openstack" {
@@ -41,7 +46,7 @@ variable "number_of_instances" {}
 
 resource "openstack_compute_instance_v2" "single-vm" {
   count     = "${var.number_of_instances}"
-  name      = "${format("cam-single-vm-%02d", count.index+1)}"
+  name      = "${format("cam-aix-vm-${random_id.rand.hex}-%02d", count.index+1)}"
   image_id  = "${var.openstack_image_id}"
   flavor_id = "${var.openstack_flavor_id}"
 
