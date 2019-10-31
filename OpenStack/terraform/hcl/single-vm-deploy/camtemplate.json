@@ -1,6 +1,6 @@
 {
-   "name": "IBM PowerVC Single Virtual Machine Example",
-   "description": "IBM PowerVC Example to instantiate virtual machine.",
+   "name": "IBM PowerVC Single Virtual AIX 7.2 VM",
+   "description": "IBM PowerVC to instantiate AIX 7.2 virtual machine.",
    "version": "1.0",
    "imageUrl": "./assets/svg/IBM_WebSphere_Standalone.svg",
    "image": "tp_WAS_standalone.png",
@@ -23,7 +23,7 @@
       }
    },
    "metadata": {
-     "displayName": "IBM PowerVC Single Virtual Machine Example",
+     "displayName": "IBM PowerVC Single AIX 7.2 Virtual Machine",
      "providerDisplayName": "openstack - IBM PowerVC",
      "longDescription": "IBM PowerVC Single Virtual Machine Example",
      "bullets": [
@@ -37,7 +37,7 @@
       },
       {
         "title": "Operating systems supported",
-        "description": "vmware: Ubuntu 14.4.01 x64"
+        "description": "PowerVM: AIX 7.2"
       },
       {
         "title": "Topology",
@@ -45,7 +45,7 @@
       },
       {
         "title": "Default virtual machine settings",
-        "description": "<ul><li>Openstack:<ul style=\"margin-left: 20px;\"><li>Ubuntu 16.04</li><ul style=\"margin-left: 20px;\"><li>Flavor: Cores = 1, Memory = 1GB, Storage = 25GB SAN</li><li>Network: Private IP - Computed, Public IP - Computed</li></ul></ul>"
+        "description": "<ul><li>Openstack:<ul style=\"margin-left: 20px;\"><li>AIX 7.2</li><ul style=\"margin-left: 20px;\"><li>Flavor: Cores = 1, Memory = 1GB, Storage = 25GB SAN</li><li>Network: Private IP - Computed, Public IP - Computed</li></ul></ul>"
       },
       {
         "title": "Usage and special notes",
